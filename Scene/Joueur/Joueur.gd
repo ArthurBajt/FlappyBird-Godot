@@ -8,6 +8,9 @@ extends KinematicBody
 var saut: int = 0
 const PUISSANCE_SAUT: int = 20
 
+const POS_MAXIMUM: int = 5
+const POS_MINIMUM: int = -5
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -31,3 +34,9 @@ func _input(event):
 func appliquePhysique(delta):
 	var motion = saut - Globals.GRAVITE
 	translation.y += motion * delta
+	
+	if translation.y < POS_MINIMUM:
+		translation.y = POS_MINIMUM
+	
+	elif translation.y > POS_MAXIMUM:
+		translation.y = POS_MAXIMUM
