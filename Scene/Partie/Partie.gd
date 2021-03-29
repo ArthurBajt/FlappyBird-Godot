@@ -9,7 +9,8 @@ const DELAY_PILIER: float = 1.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	var joueur = $Root3D/Joueur
+	joueur.connect("prendUnMur", self, "gameOver")
 
 func _process(delta):
 	timer += delta
@@ -21,3 +22,7 @@ func _process(delta):
 func ajoutePilier():
 	var instance = NODE_PILIER.instance()
 	obstacles_origine.add_child(instance)
+
+
+func gameOver():
+	get_tree().change_scene("res://Scene/GameOver/GameOver.tscn")

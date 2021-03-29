@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scene/GameOver/GameOver.gd" type="Script" id=1]
+
+[node name="GameOver" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Ui" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Ui"]
+margin_left = 389.0
+margin_top = 240.0
+margin_right = 611.0
+margin_bottom = 281.0
+text = "Boom t'es Mort !!!"
+align = 1
+
+[node name="ButtonRetour" type="Button" parent="Ui"]
+margin_left = 384.0
+margin_top = 267.0
+margin_right = 611.0
+margin_bottom = 327.0
+text = "Retour Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Ui/ButtonRetour" to="." method="_on_ButtonRetour_pressed"]
