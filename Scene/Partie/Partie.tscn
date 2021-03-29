@@ -16,5 +16,6 @@ __meta__ = {
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10 )
 
 [node name="Obstacles" type="Spatial" parent="Root3D"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 0 )
 
 [node name="Piliers" parent="Root3D/Obstacles" instance=ExtResource( 2 )]
