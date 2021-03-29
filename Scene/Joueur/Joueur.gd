@@ -1,5 +1,5 @@
 extends KinematicBody
-
+class_name Joueur
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -40,3 +40,12 @@ func appliquePhysique(delta):
 	
 	elif translation.y > POS_MAXIMUM:
 		translation.y = POS_MAXIMUM
+
+
+func get_class()-> String:
+	return "Joueur"
+
+
+signal prendUnMur
+func prendUnMur():
+	emit_signal("prendUnMur")
