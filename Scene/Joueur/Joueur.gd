@@ -6,7 +6,7 @@ extends KinematicBody
 # var b = "text"
 
 var saut: int = 0
-const PUISSANCE_SAUT: int = 8
+const PUISSANCE_SAUT: int = 20
 
 
 # Called when the node enters the scene tree for the first time.
@@ -29,4 +29,5 @@ func _input(event):
 
 
 func appliquePhysique(delta):
-	translation.y += saut * delta
+	var motion = saut - Globals.GRAVITE
+	translation.y += motion * delta

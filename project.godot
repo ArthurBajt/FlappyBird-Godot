@@ -19,6 +19,10 @@ config/name="FlappyBird-Godot"
 run/main_scene="res://Scene/Partie/Partie.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Globals="*res://Scripts/Globals.gd"
+
 [rendering]
 
 quality/driver/driver_name="GLES2"
