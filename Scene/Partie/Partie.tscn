@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scene/Joueur/Joueur.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scene/Pilier/Piliers.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scene/Pilier/Pilier.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scene/Partie/Partie.gd" type="Script" id=3]
 
 [node name="Partie" type="Node"]
+script = ExtResource( 3 )
 
 [node name="Root3D" type="Spatial" parent="."]
 __meta__ = {
@@ -15,7 +17,7 @@ __meta__ = {
 [node name="Camera" type="Camera" parent="Root3D"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10 )
 
-[node name="Obstacles" type="Spatial" parent="Root3D"]
+[node name="ObstaclesOrigine" type="Spatial" parent="Root3D"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 0 )
 
-[node name="Piliers" parent="Root3D/Obstacles" instance=ExtResource( 2 )]
+[node name="Pilier" parent="Root3D/ObstaclesOrigine" instance=ExtResource( 2 )]
