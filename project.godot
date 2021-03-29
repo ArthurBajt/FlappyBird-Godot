@@ -8,15 +8,25 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "KinematicBody",
+"class": "Joueur",
+"language": "GDScript",
+"path": "res://Scene/Joueur/Joueur.gd"
+} ]
 _global_script_class_icons={
-
+"Joueur": ""
 }
 
 [application]
 
 config/name="FlappyBird-Godot"
+run/main_scene="res://Scene/Menu/Menu.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Globals="*res://Scripts/Globals.gd"
 
 [rendering]
 
